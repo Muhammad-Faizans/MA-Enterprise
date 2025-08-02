@@ -406,7 +406,7 @@ const MAInterprise = () => {
             className="logo"
             onClick={() => setCurrentPage('home')}
           >
-            MA Interprise
+            MA Enterprise
           </h1>
           
           <nav className="desktop-nav">
@@ -658,7 +658,7 @@ const MAInterprise = () => {
         <main className="main-content">
           {currentPage === 'home' && (
             <div className="hero-section">
-              <h1>Welcome to MA Interprise</h1>
+              <h1>Welcome to MA Enterprise</h1>
               <p>Your one-stop shop for premium computers and laptops</p>
               <button
                 onClick={() => setCurrentPage('mac')}

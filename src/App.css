@@ -142,14 +142,15 @@ body {
 
 .mobile-menu {
   display: none;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+  overflow-y: auto;
 }
 
 .mobile-nav-link {
@@ -169,6 +170,29 @@ body {
 
 .mobile-nav-link:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobile-menu-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* Main Content */
@@ -948,6 +972,18 @@ body {
     display: block;
   }
 
+  .filter-section {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+  }
+
   .header-content {
     padding: 0.75rem 1rem;
   }
@@ -1012,6 +1048,11 @@ body {
   
   .price-input {
     width: 100%;
+  }
+
+  .price-filter {
+    position: relative;
+    z-index: 10;
   }
   
   .checkout-container {

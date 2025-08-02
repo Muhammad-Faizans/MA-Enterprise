@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import { collection, getDocs, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
 import { db } from './firebase';
-import EasyPaisaPayment from './components/EasyPaisaPayment';
+import EasyPaisaPayment from './Components/EasyPaisaPayment';
 
 // Custom Alert Component
 const Alert = ({ isOpen, type, title, message, onConfirm, onCancel, showCancel = false }) => {
